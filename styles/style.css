@@ -1,0 +1,62 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    background: url(../images/bg.jpg) center center / cover repeat;
+    background: linear-gradient(#B4B4B4, #B4B4B4), url(../images/bg.jpg) center center / cover repeat;
+
+
+  }
+  ::selection {
+    background-color: #DBDADA;
+    color: #352e28;
+}
+
+.btn-hide{display: none;}
+#tCaption span{
+    font-weight: 600;
+}
+
+
+section h3{
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+}
+
+
+section h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+}
+
+tr td:last-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+#actionBtns button.btn-warning{
+    margin-right: 8px;
+}
+@media screen and (max-width: 576px) {
+    #actionBtns{flex-direction: column;}
+    #actionBtns button.btn-warning{
+        margin-right: 0px;
+        margin-bottom: 8px;
+    }
+}
+
+table thead #colName, table thead #colPrice{cursor: pointer;}
+table thead th span.sort-icon{
+    margin-left: 4px;
+    transition: .2s ease-in-out;
+}
+table thead th:hover span.sort-icon{
+    color: #198754
+}
+table thead th.active-sort{
+    color: #198754
+}
+table thead th.asc span.sort-icon i{
+    transform: rotate(180deg);
+}

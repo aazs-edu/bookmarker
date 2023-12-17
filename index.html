@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Abdulrahman Zaki" />
+    <title>Bookmarker</title>
+    <!-- Favicon -->
+    <link rel="icon"  type="image/png" href="images/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <!-- Template Css File -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div>
+              <h3 class="text-center my-4 display-6 position-relative">Bookmarker</h3>
+
+              <div class="inputs-box bg-body-tertiary p-3 rounded-4 shadow-sm">
+                <h2 class="text-center">
+                  <i class="fa-solid fa-bookmark"></i>
+                  Bookmark your favorite sites
+                  <i class="fa-solid fa-bookmark"></i>
+                </h2>
+
+                <div class="col-sm-12">
+                  <label for="siteName" class="form-label fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                  <input type="text" id="siteName" class="form-control" placeholder="Bookmark Name">
+                  <div class="invalid-feedback">Site name must contain at least 3 characters</div>                  
+                </div>
+
+                  <div class="col-sm-12">
+                    <label for="siteURL" class="form-label mt-3 fw-semibold"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input type="url" id="siteURL" class="form-control" placeholder="Website URL">
+                    <div class="invalid-feedback">Site URL must be a valid one</div> 
+                  </div>
+
+                  <button id="addBtn" type="submit" class="btn btn-success mt-3 w-100" onclick="addSite()">Submit</button>
+                  <button id="updateBtn" type="submit" class="btn btn-warning mt-3 w-100 btn-hide" onclick="updateSite()">Update</button>
+              </div>
+
+              <div class="output-box mt-4 text-center shadow-sm table-responsive-sm">
+                <div class="bg-body-secondary rounded-top-4 p-3">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div id="tCaption" class="bg-white p-2 rounded-3"></div>
+                  <div class="search-box col-md-4">
+                    <input type="text" oninput="searchName(this.value)" class="form-control rounded-3 p-2" placeholder="Search ...">
+                  </div>
+                  </div>                                
+                </div>
+
+                <table class="table align-middle table-striped table-bordered">                  
+                  <thead class="table-light">
+                    <tr>
+                      <th>Index</th>
+                      <th id="colName" title="Sort Name">Website Name <span title="Sort Name" class="sort-icon"><i class="fa-regular fa-circle-up fa-lg"></i></span></th>
+                      <th>Visit</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider" id="tBody">
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <!-- Include SweetAlert from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Template JS File -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
